@@ -29,7 +29,7 @@ while game_on:
 
     blocks.spawn_bricks(ball, paddle, paddle_position)
 
-    if ball.movement(paddle):
+    if ball.movement(paddle, paddle_position):
         score.lives -= 1
         score.draw_board()
     if score.lives == 0:

@@ -15,13 +15,14 @@ class Ball(Turtle):
         self.x = choice([1, -1])
         self.y = BALL_SPEED
 
-    def movement(self, paddle):
+    def movement(self, paddle, paddle_coordinates):
         new_x = self.xcor() + self.x
         new_y = self.ycor() + self.y
         self.goto(new_x, new_y)
         self.ball_bounce(paddle)
         if self.ycor() >= 350 or self.ycor() <= -350:
             self.ball_reset()
+            paddle.goto(paddle_coordinates)
             return True
         return False
 
