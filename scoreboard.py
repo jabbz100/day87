@@ -48,7 +48,7 @@ class Scoreboard:
         self.draw_highscore()
 
     def draw_highscore(self):
-        self.board.goto(200, 265)
+        self.board.goto(150, 265)
         self.board.write(f"HIGHSCORE: {self.highscore}", font=FONT)
 
     def game_over(self):
